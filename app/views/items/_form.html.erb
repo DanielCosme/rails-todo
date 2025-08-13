@@ -1,0 +1,3 @@
+<%= form_with model: item, html: { id: "new-item-form" }, url: items_path, data: { turbo_stream: true } do |form| %>
+  <%= form.text_field :title, placeholder: "Add TODO", class: "my-10 text-center min-w-full" %>
+<% end %>
