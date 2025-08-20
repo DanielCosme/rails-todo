@@ -3,7 +3,10 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
   <% end %>
   <%= render partial: "form", locals: { item: Item.new } %>
-  <ul id="items">
-    <%= render @items %>
+  <ul id="items-not-done">
+    <%= render @not_done %>
+  </ul>
+  <ul id="items-done">
+    <%= render @done %>
   </ul>
 </div>

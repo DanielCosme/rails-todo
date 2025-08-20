@@ -1,10 +1,10 @@
-<li class=
-    "
-      my-2
-      hover:bg-green-500
-      <%= item.status ? 'line-through' : '' %>
-    "
-    id="<%= dom_id item %>"
->
-  <%= item.title %>
-</li>
+<%= turbo_frame_tag item do %>
+  <div class="my-2 hover:bg-gray-300 ">
+    <%= button_to flip_item_path(item), class: "w-full text-left" do %>
+      <li class="<%= item.status ? 'line-through' : '' %> <%= item.status ? 'text-gray-400' : '' %>">
+        <%= item.title %>
+      </li>
+    <% end %>
+  </div>
+<% end %>
+
